@@ -1,48 +1,55 @@
 # Tabletop Design Lab
 
-An open-source, skill-based workflow for turning tabletop rulebooks into traceable design evidence.
+An open-source lab of Codex skills for tabletop-game design. The first release focuses on one narrow job: finding rulebook defects before a blind playtest without inventing missing rules.
 
-The first release does one thing: it audits written rules without inventing missing answers.
+## What `rules-audit` does
 
-## Why it exists
+The skill checks a supplied rulebook for contradictions, ambiguity, missing rules, terminology drift, and unresolved timing. Each serious finding includes its source, the strongest counter-reading, a legal example that reaches the problem, and its gameplay consequence.
 
-Rulebook reviews often mix three different activities: identifying what the rules say, guessing what the designer intended, and proposing a fix. `rules-audit` keeps them separate so a designer can resolve the right problem before a blind playtest.
+It produces one of three scoped readiness outcomes:
 
-It can find contradictions, ambiguity, missing rules, terminology drift, and unresolved timing. It cannot determine whether a game is fun, balanced, fair, or understandable to real players.
+- `READY`
+- `READY WITH CLARIFICATIONS`
+- `NOT READY FOR BLIND PLAYTEST`
 
-## Quick start
+It does not judge balance, fun, fairness, or player comprehension. Those require playtest evidence.
 
-1. Copy [`skills/rules-audit`](skills/rules-audit) into your Codex skills directory.
-2. Start a new task with your rulebook available.
-3. Ask: `Use $rules-audit to audit this rulebook for blind-playtest readiness.`
+## Try it
 
-To inspect the repository without installing anything, compare the deliberately flawed [Lantern Line rulebook](examples/lantern-line/rulebook.md) with its [example audit](examples/lantern-line/audit.md).
+1. Copy [`skills/rules-audit`](skills/rules-audit) into your Codex skills directory as `rules-audit`.
+2. Start a new Codex task and attach or reference your rulebook.
+3. Use this prompt:
 
-## v0.1 scope
+   ```text
+   Use $rules-audit to audit the attached rulebook. Treat only the supplied document as authoritative. Do not browse or rely on remembered rules.
+   ```
 
-- One Codex skill: `rules-audit`.
-- One original, redistributable example game.
-- One deterministic repository check using the Python standard library.
-- No automated balancing, simulated players, or claims about human experience.
+For a result you can inspect immediately, compare the original [Lantern Line rulebook](examples/lantern-line/rulebook.md) with its [example audit](examples/lantern-line/audit.md).
 
-## Principles
+## How the method works
 
-- Source text outranks assumptions.
-- Diagnosis is separate from solution design.
-- Uncertainty stays visible until the designer resolves it.
-- AI-generated analysis is a lead for investigation, not playtest evidence.
+The skill keeps five things separate: written rules, reasonable inferences, unresolved uncertainty, demonstrated problems, and proposed fixes. A `BLOCKER` or `MAJOR` finding needs a legal sequence supported by every plausible reading. Optional modes are assessed separately from the core game.
 
-## Check the repository
+This is a human-in-the-loop review method, not a deterministic validator. Model output can vary, severity still needs editorial judgment, and a clean audit does not prove that a rulebook will succeed with players. See [Evaluation notes](BENCHMARK.md) for the current evidence and known failure modes.
+
+## Verify the repository
+
+Run the standard-library checks:
 
 ```bash
-python -m unittest discover -s tests
+python -m unittest discover -s tests -v
 ```
 
-The check rejects unfinished skill scaffolding and common document formats that could accidentally introduce private or third-party source material.
+They verify the public example and reject common document formats that could accidentally add private or third-party source material.
 
-## Status
+## Project boundaries
 
-Experimental. The current skill has been exercised on the included example; broader game coverage is not yet established.
+- Public content is written in English.
+- Examples are original and redistributable.
+- Third-party rulebooks and private game files are never committed.
+- New skills are added only after an end-to-end example demonstrates a real need.
+
+Release history is in [CHANGELOG.md](CHANGELOG.md). Contributions should follow [AGENTS.md](AGENTS.md).
 
 ## License
 

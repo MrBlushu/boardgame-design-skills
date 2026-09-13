@@ -9,6 +9,8 @@ class RepositoryContract(unittest.TestCase):
     def test_public_vertical_slice_is_complete(self):
         required = [
             ROOT / "README.md",
+            ROOT / "BENCHMARK.md",
+            ROOT / "CHANGELOG.md",
             ROOT / "LICENSE",
             ROOT / ".github/workflows/test.yml",
             ROOT / "skills/rules-audit/SKILL.md",
