@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rules Audit"
+  short_description: "Audit tabletop rules without inventing answers"
+  default_prompt: "Use $rules-audit to inspect this board-game rulebook and produce a traceable audit."
