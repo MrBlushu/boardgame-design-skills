@@ -32,7 +32,8 @@ Before recording a finding:
 - confirm that the gap or competing readings are supported by the source, not merely imaginable;
 - find and state the strongest source-supported resolution before assigning severity, including specific procedures, component text, diagrams, and examples; if it fully determines play, omit the finding or classify only the obstructive wording as editorial;
 - when the candidate concerns a shared concept such as targeting, immunity, discarding, or elimination, inspect every rule, component, and exception that uses that concept before scoping or merging the finding;
-- for every `BLOCKER` or `MAJOR`, give a concrete legal witness state or reproducible sequence; if reachability cannot be established, omit it or record it as a scope limitation;
+- for every `BLOCKER` or `MAJOR`, give a concrete legal witness state or reproducible sequence that reaches the disputed decision using only rules shared by all interpretations; never assume the contested action or state is already legal;
+- if reachability cannot be established without that circular assumption, omit the candidate or record it as a scope limitation;
 - ignore harmless social conventions and hypothetical pathologies with no demonstrated gameplay consequence unless the user requests an exhaustive audit;
 - merge findings that share one root cause.
 
@@ -50,6 +51,7 @@ For each finding, record:
 - category and severity (`BLOCKER`, `MAJOR`, or `MINOR`);
 - exact source section and a short quotation or faithful paraphrase;
 - observed issue, kept separate from its possible consequence;
+- strongest source-supported resolution considered and why it does not settle the finding;
 - plausible interpretations when relevant;
 - concrete legal witness state or sequence for `BLOCKER` and `MAJOR` findings;
 - concrete gameplay consequence;
@@ -70,6 +72,8 @@ Assign readiness consistently:
 - `READY`: no unresolved `BLOCKER` or `MAJOR` findings;
 - `READY WITH CLARIFICATIONS`: no blocker, and remaining major issues are localized enough that the core lifecycle is executable once clarified;
 - `NOT READY FOR BLIND PLAYTEST`: a blocker or unresolved issue prevents reliable execution of the core lifecycle.
+
+Scope readiness to the affected rules. A problem confined to an optional mode or variant must not lower core-game readiness; report that mode or variant separately.
 
 Then provide the findings in priority order, followed by:
 

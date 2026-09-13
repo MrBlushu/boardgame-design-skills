@@ -26,7 +26,7 @@ class RepositoryContract(unittest.TestCase):
     def test_example_audit_is_traceable(self):
         audit = (ROOT / "examples/lantern-line/audit.md").read_text(encoding="utf-8")
         self.assertIn("RA-001", audit)
-        self.assertEqual(audit.count("**Source:**"), 5)
+        self.assertEqual(audit.count("**Source:**"), 4)
         self.assertIn("NOT READY FOR BLIND PLAYTEST", audit)
 
     def test_repository_contains_no_source_documents(self):
