@@ -30,8 +30,8 @@ Read the complete authoritative rules before reporting findings. Check only issu
 Before recording a finding:
 
 - confirm that the gap or competing readings are supported by the source, not merely imaginable;
-- check whether another section, diagram, caption, component label, or worked example resolves it;
-- when a general summary and a specific procedure or component instruction differ, prefer the narrower reading if it makes the source coherent; report an ambiguity only when multiple coherent readings still change play;
+- find and state the strongest source-supported resolution before assigning severity, including specific procedures, component text, diagrams, and examples; if it fully determines play, omit the finding or classify only the obstructive wording as editorial;
+- when the candidate concerns a shared concept such as targeting, immunity, discarding, or elimination, inspect every rule, component, and exception that uses that concept before scoping or merging the finding;
 - for every `BLOCKER` or `MAJOR`, give a concrete legal witness state or reproducible sequence; if reachability cannot be established, omit it or record it as a scope limitation;
 - ignore harmless social conventions and hypothetical pathologies with no demonstrated gameplay consequence unless the user requests an exhaustive audit;
 - merge findings that share one root cause.
