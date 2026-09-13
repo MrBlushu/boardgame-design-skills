@@ -31,6 +31,7 @@ Before recording a finding:
 
 - confirm that the gap or competing readings are supported by the source, not merely imaginable;
 - check whether another section, diagram, caption, component label, or worked example resolves it;
+- when a general summary and a specific procedure or component instruction differ, prefer the narrower reading if it makes the source coherent; report an ambiguity only when multiple coherent readings still change play;
 - for every `BLOCKER` or `MAJOR`, give a concrete legal witness state or reproducible sequence; if reachability cannot be established, omit it or record it as a scope limitation;
 - ignore harmless social conventions and hypothetical pathologies with no demonstrated gameplay consequence unless the user requests an exhaustive audit;
 - merge findings that share one root cause.
@@ -52,9 +53,9 @@ For each finding, record:
 - plausible interpretations when relevant;
 - concrete legal witness state or sequence for `BLOCKER` and `MAJOR` findings;
 - concrete gameplay consequence;
-- whether a designer decision is required.
+- whether clarification is required and from whom (`source owner`, or `designer` for a draft).
 
-Use `BLOCKER` only when play cannot continue or different readings produce materially incompatible states. Use `MAJOR` when the issue can change legal actions, outcomes, or repeated play. Use `MINOR` for localized comprehension or editorial problems.
+Use `BLOCKER` only when no coherent source-supported interpretation lets players continue through a reachable state or complete the core game loop. Different outcomes alone do not make an ambiguity a blocker. Use `MAJOR` when at least one coherent procedure exists but the issue can change legal actions, outcomes, or repeated play. Use `MINOR` for localized comprehension or editorial problems.
 
 ## Output
 
@@ -64,9 +65,15 @@ Begin with:
 - scope limitations;
 - readiness: `READY`, `READY WITH CLARIFICATIONS`, or `NOT READY FOR BLIND PLAYTEST`.
 
+Assign readiness consistently:
+
+- `READY`: no unresolved `BLOCKER` or `MAJOR` findings;
+- `READY WITH CLARIFICATIONS`: no blocker, and remaining major issues are localized enough that the core lifecycle is executable once clarified;
+- `NOT READY FOR BLIND PLAYTEST`: a blocker or unresolved issue prevents reliable execution of the core lifecycle.
+
 Then provide the findings in priority order, followed by:
 
-- unresolved designer decisions;
+- unresolved authority clarifications, or designer decisions when auditing a draft;
 - editorial-only corrections, if any;
 - a short coverage summary.
 

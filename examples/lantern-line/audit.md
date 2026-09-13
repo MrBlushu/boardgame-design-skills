@@ -15,7 +15,7 @@
 - **Possible interpretations:** The maximum hand size should be four; or the turn should not begin by drawing to four.
 - **Concrete witness:** Every player starts with three cards; on that player's first turn, step 1 requires drawing to four while the stated maximum remains three.
 - **Gameplay consequence:** Players cannot determine the intended hand cycle or when the deck is consumed.
-- **Designer decision required:** Yes.
+- **Clarification required:** Yes — designer.
 
 ### RA-002 — Missing rule — BLOCKER
 
@@ -23,7 +23,7 @@
 - **Observed issue:** A reachable draw step has no resolution.
 - **Concrete witness:** With four players, setup deals twelve of eighteen cards. If six draw steps occur without an end condition, the next turn still requires a draw from the empty deck.
 - **Gameplay consequence:** Play may stop before either win or loss condition occurs.
-- **Designer decision required:** Yes.
+- **Clarification required:** Yes — designer.
 
 ### RA-003 — Ambiguity — MAJOR
 
@@ -32,7 +32,7 @@
 - **Possible interpretations:** A player must play when able; or a player may decline and take the storm penalty.
 - **Concrete witness:** A player who holds a legally playable card still reaches the conditional wording “If you cannot play,” without a rule saying whether declining is legal.
 - **Gameplay consequence:** Players may gain or lose control over hand management and storm timing.
-- **Designer decision required:** Yes.
+- **Clarification required:** Yes — designer.
 
 ### RA-004 — Missing rule — MAJOR
 
@@ -40,7 +40,7 @@
 - **Observed issue:** A listed component has no defined function.
 - **Concrete witness:** Immediately after following setup, all six Storm cards remain outside the defined game state, and no later phase references them.
 - **Gameplay consequence:** Players cannot know whether the storm marker should advance only after a failed play or also through an omitted Storm-card procedure.
-- **Designer decision required:** Yes.
+- **Clarification required:** Yes — designer.
 
 ### RA-005 — Ambiguity — MAJOR
 
@@ -49,9 +49,9 @@
 - **Possible interpretations:** Verbal disclosure is allowed; only physical cards are hidden; or exact card information is prohibited.
 - **Concrete witness:** A player can propose naming an exact card while keeping it physically hidden; the permission to discuss cards and the secrecy rule do not determine whether that communication is legal.
 - **Gameplay consequence:** The available cooperation and memory burden vary materially.
-- **Designer decision required:** Yes.
+- **Clarification required:** Yes — designer.
 
-## Unresolved designer decisions
+## Unresolved authority clarifications
 
 1. Define the hand and draw cycle.
 2. Define deck exhaustion.
