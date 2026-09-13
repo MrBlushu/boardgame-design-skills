@@ -14,6 +14,7 @@ Produce a traceable diagnosis of the supplied rules without silently completing 
 3. Label conclusions as `CURRENT RULE`, `INFERENCE`, `UNCERTAINTY`, or `PROBLEM`.
 4. Never turn an inference, common convention, or proposed fix into a rule.
 5. Do not edit source files unless the user separately asks for an approved rewrite.
+6. For visual rules, inspect every relevant page, panel, diagram, caption, and worked example. Reconcile them with the prose, and treat extraction or encoding artifacts as tooling limitations rather than rulebook defects.
 
 ## Audit
 
@@ -25,6 +26,14 @@ Read the complete authoritative rules before reporting findings. Check only issu
 - terminology: one concept has inconsistent names or one name has conflicting meanings;
 - timing: order, priority, duration, or simultaneous effects are unresolved;
 - editorial: wording obstructs comprehension without changing the design.
+
+Before recording a finding:
+
+- confirm that the gap or competing readings are supported by the source, not merely imaginable;
+- check whether another section, diagram, caption, component label, or worked example resolves it;
+- for every `BLOCKER` or `MAJOR`, give a concrete legal witness state or reproducible sequence; if reachability cannot be established, omit it or record it as a scope limitation;
+- ignore harmless social conventions and hypothetical pathologies with no demonstrated gameplay consequence unless the user requests an exhaustive audit;
+- merge findings that share one root cause.
 
 Before finalizing, run one lifecycle coverage pass:
 
@@ -41,6 +50,7 @@ For each finding, record:
 - exact source section and a short quotation or faithful paraphrase;
 - observed issue, kept separate from its possible consequence;
 - plausible interpretations when relevant;
+- concrete legal witness state or sequence for `BLOCKER` and `MAJOR` findings;
 - concrete gameplay consequence;
 - whether a designer decision is required.
 
@@ -59,5 +69,7 @@ Then provide the findings in priority order, followed by:
 - unresolved designer decisions;
 - editorial-only corrections, if any;
 - a short coverage summary.
+
+Use the full finding record for `BLOCKER` and `MAJOR` issues. Group `MINOR` and editorial issues compactly. Do not narrate checks that passed unless they materially bound the scope or readiness conclusion.
 
 Do not report an issue merely because the design is unusual. Do not claim the game is balanced, fun, fair, or clear from a rules audit.
