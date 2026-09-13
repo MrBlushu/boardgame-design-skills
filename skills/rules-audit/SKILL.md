@@ -26,6 +26,14 @@ Read the complete authoritative rules before reporting findings. Check only issu
 - timing: order, priority, duration, or simultaneous effects are unresolved;
 - editorial: wording obstructs comprehension without changing the design.
 
+Before finalizing, run one lifecycle coverage pass:
+
+- trace setup, a normal turn, success, failure, timeout, cleanup, and the next round when those states exist;
+- for each component, deck, pile, and resource, check initialization, ownership, visibility, legal transitions, cleanup, and exhaustion;
+- verify that every reachable turn has at least one legal action or an explicit stop rule;
+- order resolution checks, triggered effects, recovery, discards, and state changes when their results can interact;
+- distinguish an action being illegal from it being legal but causing a failed objective.
+
 For each finding, record:
 
 - stable ID (`RA-001`, `RA-002`, ...);
