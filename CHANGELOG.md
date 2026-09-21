@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1.0] - 2026-09-13
+## [0.1.0] - 2026-09-21
 
 ### Added
 
@@ -9,3 +9,4 @@
 - The original Lantern Line rulebook and example audit.
 - Qualitative evaluation notes covering five document profiles.
 - Standard-library repository checks and GitHub Actions verification.
+- Project roadmap and an original pixel-art banner.

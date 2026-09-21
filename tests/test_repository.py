@@ -11,6 +11,7 @@ class RepositoryContract(unittest.TestCase):
             ROOT / "README.md",
             ROOT / "BENCHMARK.md",
             ROOT / "CHANGELOG.md",
+            ROOT / "assets/readme-banner.png",
             ROOT / "LICENSE",
             ROOT / ".github/workflows/test.yml",
             ROOT / "skills/rules-audit/SKILL.md",

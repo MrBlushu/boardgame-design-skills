@@ -1,4 +1,6 @@
-# Tabletop Design Lab
+# Boardgame Design Skills
+
+![A paladin, a wizard, and a dragon playing cards around a tavern table in pixel art](assets/readme-banner.png)
 
 An open-source lab of Codex skills for tabletop-game design. The first release focuses on one narrow job: finding rulebook defects before a blind playtest without inventing missing rules.
 
@@ -48,6 +50,15 @@ They verify the public example and reject common document formats that could acc
 - Examples are original and redistributable.
 - Third-party rulebooks and private game files are never committed.
 - New skills are added only after an end-to-end example demonstrates a real need.
+
+## Roadmap
+
+- [x] Release `rules-audit` with an original fixture and an anonymous evaluation record.
+- [ ] Add a skill that turns audit findings into a focused blind-playtest checklist.
+- [ ] Add a skill that structures playtest observations without presenting them as rules.
+- [ ] Expand the anonymous benchmark with repeated runs to track consistency.
+
+Development happens on `develop`. Each skill starts with an original, redistributable fixture, is tested locally against more complex rulebooks that are never committed, and reaches `main` only after its example, documentation, and repository checks agree.
 
 Release history is in [CHANGELOG.md](CHANGELOG.md). Contributions should follow [AGENTS.md](AGENTS.md).
 
