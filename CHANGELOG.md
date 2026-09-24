@@ -1,5 +1,12 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- `playtest-planner`, a Codex skill for traceable mechanical scenario cards.
+- A resolved Lantern Line rulebook and executable playtest-plan example.
+
 ## [0.1.0] - 2026-09-21
 
 ### Added

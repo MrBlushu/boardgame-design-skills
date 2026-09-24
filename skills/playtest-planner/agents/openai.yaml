@@ -1,0 +1,4 @@
+interface:
+  display_name: "Playtest Planner"
+  short_description: "Create traceable tabletop test scenarios"
+  default_prompt: "Use $playtest-planner to turn this rulebook and audit into focused scenario cards."

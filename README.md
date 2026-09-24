@@ -34,6 +34,10 @@ The skill keeps five things separate: written rules, reasonable inferences, unre
 
 This is a human-in-the-loop review method, not a deterministic validator. Model output can vary, severity still needs editorial judgment, and a clean audit does not prove that a rulebook will succeed with players. See [Evaluation notes](BENCHMARK.md) for the current evidence and known failure modes.
 
+## In development
+
+[`playtest-planner`](skills/playtest-planner) turns an executable rulebook and optional audit into a small set of traceable scenario cards. It prepares mechanical checks for human or agent-assisted testing without claiming evidence about fun or balance. See the [Lantern Line example plan](examples/lantern-line/playtest-plan.md).
+
 ## Verify the repository
 
 Run the standard-library checks:
@@ -54,7 +58,7 @@ They verify the public example and reject common document formats that could acc
 ## Roadmap
 
 - [x] Release `rules-audit` with an original fixture and an anonymous evaluation record.
-- [ ] Add a skill that turns audit findings into a focused blind-playtest checklist.
+- [x] Add a skill that turns audit findings into a focused blind-playtest checklist.
 - [ ] Add a skill that structures playtest observations without presenting them as rules.
 - [ ] Expand the anonymous benchmark with repeated runs to track consistency.
 
